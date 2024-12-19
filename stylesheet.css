@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ea49e0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #8B0000; /*Maxwells fav color*/
+    height: calc(100vh - 140px); 
+}
+
+/* Styling for bp1 (takes up one-third of the width) */
+.bp1, .bp2, .bp3 {
+    border: 1px solid #000; /* Thin black border */
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+    text-align: left;
+    flex: 0 0 33%; /* Takes up 33% of the container's width */
+    margin-bottom: 20px; /* Adds spacing below bp1 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading, Tags, and Body styling remains the same */
+.bp-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.bp-tags {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.bp-body {
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.container {
+    display: flex;
+    margin-top: 80px;
+    margin-bottom: 60px; 
+    flex: 1;
+}
+
+.sidebar {
+    background-color: #ff8c00; 
+    padding: 20px;
+    width: 250px;
+    position: sticky;
+    top: 80px; 
+    height: calc(100vh - 140px); 
+    overflow-y: auto;
+}
+
+.form-container {
+    margin-top: 20px;
+}
+.poll-results {
+    margin-top: 20px;
+}
+
+.list {
+    margin-bottom: 1.5em;
+}
+
+@media (max-width: 768px) { 
+    .container {
+        flex-direction: column;
+        margin-top: 120px; 
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+.carousel-caption {
+    bottom: 5%;
+    transform: translate(0, 50%);
+}
+
+.carousel-caption h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(4, 7, 5);
+}
+
+@media (min-width: 992px) {
+    .carousel-caption h5 {
+        font-size: 4rem;
+        margin-bottom: auto;
+    }
+}
+
+.carousel-indicators li {
+    background-color: #ff8c00;
+}
+
+.carousel-inner {
+    padding-left: 30%;
+}
+
+.badge {
+    border: #333;
+    border-radius: 200em;
+    background-color: rgb(47, 61, 193);
+    color: azure;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: inline-block; 
+    margin-right: 10px;
+    
+}
+
+.badge-2 {
+    border: #333;
+    border-radius: 200em;
+    background-color: rgb(207, 23, 23);
+    color: azure;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: inline-block; 
+    margin-right: 10px;
+    
+}
+
+.card {
+    background-color: #15110d;
+    border: #333;
+    border-radius: 0%;
+}
+
+.card-header {
+    background-color: aqua;
+    position: relative;
+    text-align: center;
+}
+
+.card-body {
+    background-color:#9e1c3c;
+}
+
+.card-text {
+    background-color:#9cc61e;
+    position: relative;
+    text-align: center;
+}
+
